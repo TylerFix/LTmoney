@@ -21,9 +21,9 @@ def update_data_and_graph(interval):
 
         # Разделение данных на списки для каждого столбца
         time_price = [row[4] for row in price_data]
-        trakt_salt_price = [row[1] for row in price_data]
-        derzhprom_nikolskii_price = [row[2] for row in price_data]
-        dafi_uvileynii_price = [row[3] for row in price_data]
+        trakt_salt_price = [int(row[1]) for row in price_data]
+        derzhprom_nikolskii_price = [int(row[2]) for row in price_data]
+        dafi_uvileynii_price = [int(row[3]) for row in price_data]
 
         # Создание графика
         fig_price = go.Figure()
