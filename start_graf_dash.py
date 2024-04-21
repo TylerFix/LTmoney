@@ -30,7 +30,7 @@ def update_data_and_graph(interval):
         fig_price.add_trace(go.Scatter(x=time_price, y=trakt_salt_price, mode='lines', name='trakt_salt'))
         fig_price.add_trace(go.Scatter(x=time_price, y=derzhprom_nikolskii_price, mode='lines', name='derzhprom_nikolskii'))
         fig_price.add_trace(go.Scatter(x=time_price, y=dafi_uvileynii_price, mode='lines', name='dafi_uvileynii'))
-        fig_price.update_layout(title='Цены на такси', xaxis_title='Время', yaxis_title='Цена')
+        fig_price.update_layout(title='Цены OnTaxi Харьков', xaxis_title='Время', yaxis_title='Цена')
         
 
         return fig_price

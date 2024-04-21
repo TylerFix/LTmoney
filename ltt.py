@@ -17,17 +17,17 @@ cursor = conn.cursor()
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS Price(
 id INTEGER PRIMARY KEY,
-trakt_salt TEXT,
-derzhprom_nikolskii TEXT,
-dafi_uvileynii TEXT,
+trakt_salt INTEGER,
+derzhprom_nikolskii INTEGER,
+dafi_uvileynii INTEGER,
 time TEXT)
 ''')
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS Percent(
 id INTEGER PRIMARY KEY,
-trakt_salt TEXT,
-derzhprom_nikolskii TEXT,
-dafi_uvileynii TEXT,
+trakt_salt INTEGER,
+derzhprom_nikolskii INTEGER,
+dafi_uvileynii INTEGER,
 time TEXT)
 ''')
 browser = webdriver.Chrome('')
@@ -90,9 +90,9 @@ def calculation_price (streets_list_otkuda,streets_list_kuda,value_list,value_pr
                 formatted_time = now.strftime('%Y-%m-%d %H:%M:%S')
                 print(formatted_time)
                 # Запись в БД
-                cursor.execute('INSERT INTO Price (trakt_salt, derzhprom_nikolskii, dafi_uvileynii, time) VALUES (?, ?, ?, ?)', (str(value_list[0]), str(value_list[1]),str(value_list[2]),str(formatted_time)))
+                cursor.execute('INSERT INTO Price (trakt_salt, derzhprom_nikolskii, dafi_uvileynii, time) VALUES (?, ?, ?, ?)', (int(value_list[0]), int(value_list[1]),int(value_list[2]),str(formatted_time)))
                 conn.commit()
-                cursor.execute('INSERT INTO Percent (trakt_salt, derzhprom_nikolskii, dafi_uvileynii, time) VALUES (?, ?, ?, ?)', (str(value_prec[0]), str(value_prec[1]),str(value_prec[2]),str(formatted_time)))
+                cursor.execute('INSERT INTO Percent (trakt_salt, derzhprom_nikolskii, dafi_uvileynii, time) VALUES (?, ?, ?, ?)', (int(value_prec[0]), int(value_prec[1]),int(value_prec[2]),str(formatted_time)))
                 conn.commit()
                 count_et = 0
             
