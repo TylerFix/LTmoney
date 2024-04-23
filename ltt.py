@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 import sqlite3
 import datetime
+from selenium.webdriver.chrome.options import Options
 
 #  Адресса для просчета
 streets_list_otkuda = ['Тракторобудівників проспект, 142/1','Ст. Метро "Держпром"','ТЦ "Дафі" (вхід ближче до Roshen)','Георгія Тарасенка (Плеханівська) вулиця, 43/1','Плиткова вулиця, 4']
@@ -36,7 +37,13 @@ plechan_moroz INTEGER,
 plitk_pastera INTEGER,
 time TEXT)
 ''')
-browser = webdriver.Chrome('')
+
+# Создание объекта опций для Chrome
+chrome_options = Options()
+
+# Установка опции headless в True
+chrome_options.headless = True
+browser = webdriver.Chrome(options=chrome_options)
 browser.get('https://ontaxi.com.ua/ru/kharkiv')
 def calculation_price (streets_list_otkuda,streets_list_kuda,value_list,value_prec,count_et,basic_price,count_streets):
     while True:
@@ -44,12 +51,12 @@ def calculation_price (streets_list_otkuda,streets_list_kuda,value_list,value_pr
             # Тело обновление сравнений
             element_otkuda = browser.find_element('xpath','//*[@id="inputplace0"]')
             element_otkuda.send_keys(streets_list_otkuda[count_et]) 
-            sleep(3)
+            sleep(2)
             element_otkuda.send_keys(Keys.ENTER) # костыль
             sleep(1)
             element_kuda = browser.find_element('xpath', '//*[@id="inputplace1"]')
             element_kuda.send_keys(streets_list_kuda[count_et])
-            sleep(3)
+            sleep(2)
             element_kuda.send_keys(Keys.ENTER)
             sleep(1)
             element_money = browser.find_element('xpath','//*[@id="orderForm"]/div[2]/div/div[1]/div[5]/div[2]/span/span[1]/span')
