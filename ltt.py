@@ -152,10 +152,10 @@ def calculation_price (streets_list_otkuda,streets_list_kuda,value_prec,count_et
             sleep(1)
             element_money = browser.find_element('xpath','//*[@id="orderForm"]/div[2]/div/div[1]/div[5]/div[2]/span/span[1]/span')
             print('Значение : ',element_money.text)
-            if element_money.text != 50:
+            if int(element_money.text) > 50:
                 value_list[count_et] = element_money.text
-            l_adress_otkuda = len(streets_list_otkuda[count_et])
-            l_adress_kuda = len(streets_list_kuda[count_et])
+            l_adress_otkuda = len(streets_list_otkuda[db_count][count_et])
+            l_adress_kuda = len(streets_list_kuda[db_count][count_et])
 
             for i in range(0,l_adress_otkuda):
                 element_otkuda.send_keys(Keys.BACKSPACE)
