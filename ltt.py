@@ -256,8 +256,8 @@ def calculation_price_ontaxi(streets_list_otkuda,streets_list_kuda,value_prec,co
     db_cur[db_count] = db_conn[db_count].cursor()
     browser = webdriver.Chrome(options=chrome_options)
     browser.get(web_list[db_count])
-    value_list = [None,None,None,None,None]
-    value_dif = [None,None,None,None,None]
+    value_list = [0,0,0,0,0]
+    value_dif = [0,0,0,0,0]
     basic_lt = [[79,52,79,88,52],
                 [67,66,77,49,71],
                 [106,63,101,102,73],
@@ -295,7 +295,10 @@ def calculation_price_ontaxi(streets_list_otkuda,streets_list_kuda,value_prec,co
                 diff_price = int(value_list[count_et]) - basic_price[count_et]
                 if diff_price != 0:
                     perc_value = int(value_list[count_et])*0.01
-                    value_prec[count_et] = round(diff_price/perc_value)
+                    if perc_value != 0:
+                        value_prec[count_et] = round(diff_price/perc_value)
+                    else: 
+                        value_prec[count_et] = 0
                 else: 
                     value_prec[count_et] = 0
                 count_et +=1            
@@ -319,7 +322,7 @@ def calculation_price_ontaxi(streets_list_otkuda,streets_list_kuda,value_prec,co
                 count_et = 0
             
         except Exception as e:
-            print('Ошибка : ', e)
+            print('Ошибка парсера : ', e)
             
 # Парсер opti
 def calculation_price_opti (db_count,web_list_opti,count_et_opti,db_conn_opti,db_cur_opti,streets_list_otkuda_opti,streets_list_kuda_opti):

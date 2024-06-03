@@ -22,9 +22,9 @@ def update_data_and_graph(start_time, end_time):
         # Разделение данных на списки для каждого столбца
         time_price = [row[12] for row in price_data]
         sum_ontaxi_ha = [row[11] for row in price_data]
-        trakt_salt_price = [int(row[1]) for row in price_data]
-        derzhprom_nikolskii_price = [int(row[2]) for row in price_data]
-        dafi_uvileynii_price = [int(row[3]) for row in price_data]
+        trakt_salt_price = [row[1] for row in price_data]
+        derzhprom_nikolskii_price = [row[2] for row in price_data]
+        dafi_uvileynii_price = [row[3] for row in price_data]
         plechan_moroz_price = [row[4] for row in price_data]
         plitk_pastera_price = [row[5] for row in price_data]
         dif_ontaxi_ha_1 = [row[6] for row in price_data]
@@ -48,9 +48,9 @@ def update_data_and_graph(start_time, end_time):
         price_data_opti_ha = cursor.fetchall()
 
         time_price_opti_ha = [row[11] for row in price_data_opti_ha]
-        adress_1_ha = [int(row[1]) for row in price_data_opti_ha]
-        adress_2_ha = [int(row[2]) for row in price_data_opti_ha]
-        adress_3_ha = [int(row[3]) for row in price_data_opti_ha]
+        adress_1_ha = [row[1] for row in price_data_opti_ha]
+        adress_2_ha = [row[2] for row in price_data_opti_ha]
+        adress_3_ha = [row[3] for row in price_data_opti_ha]
         adress_4_ha = [row[4] for row in price_data_opti_ha]
         adress_5_ha = [row[5] for row in price_data_opti_ha]
            
@@ -69,9 +69,9 @@ def update_data_and_graph(start_time, end_time):
         
         time_price_zap = [row[12] for row in price_data_zap]
         sum_ontaxi_zap = [row[11] for row in price_data_zap]
-        krut_perem_price = [int(row[1]) for row in price_data_zap]
-        avram_aptech_price = [int(row[2]) for row in price_data_zap]
-        popovka_daln_price = [int(row[3]) for row in price_data_zap]
+        krut_perem_price = [row[1] for row in price_data_zap]
+        avram_aptech_price = [row[2] for row in price_data_zap]
+        popovka_daln_price = [row[3] for row in price_data_zap]
         ruban_budiv_price = [row[4] for row in price_data_zap]
         tenis_tepli_price = [row[5] for row in price_data_zap]
         dif_ontaxi_zap_1 = [row[6] for row in price_data_zap]
@@ -97,9 +97,9 @@ def update_data_and_graph(start_time, end_time):
         
         time_price_dnepr = [row[12] for row in price_data_dnepr]
         sum_ontaxi_dnepr = [row[11] for row in price_data_dnepr]
-        mironova_makar_price = [int(row[1]) for row in price_data_dnepr]
-        zapor_zapor_price = [int(row[2]) for row in price_data_dnepr]
-        peremog_peremog_price = [int(row[3]) for row in price_data_dnepr]
+        mironova_makar_price = [row[1] for row in price_data_dnepr]
+        zapor_zapor_price = [row[2] for row in price_data_dnepr]
+        peremog_peremog_price = [row[3] for row in price_data_dnepr]
         novoch_pravdi_price = [row[4] for row in price_data_dnepr]
         zoryana_zlavni_price = [row[5] for row in price_data_dnepr]
         dif_ontaxi_dp_1 = [row[6] for row in price_data_dnepr]
@@ -127,9 +127,9 @@ def update_data_and_graph(start_time, end_time):
         
         time_price_kr = [row[12] for row in price_data_kr]
         sum_ontaxi_kr = [row[11] for row in price_data_kr]
-        franc_avto_price = [int(row[1]) for row in price_data_kr]
-        indus_sonyach_price = [int(row[2]) for row in price_data_kr]
-        prosk_goverl_price = [int(row[3]) for row in price_data_kr]
+        franc_avto_price = [row[1] for row in price_data_kr]
+        indus_sonyach_price = [row[2] for row in price_data_kr]
+        prosk_goverl_price = [row[3] for row in price_data_kr]
         turn_grud_price = [row[4] for row in price_data_kr]
         glazunov_centr_price = [row[5] for row in price_data_kr]
         dif_ontaxi_kr_1 = [row[6] for row in price_data_kr]
@@ -156,9 +156,9 @@ def update_data_and_graph(start_time, end_time):
         
         time_price_zt = [row[12] for row in price_data_zt]
         sum_ontaxi_zt = [row[11] for row in price_data_zt]
-        mazep_epic_price = [int(row[1]) for row in price_data_zt]
-        novog_hinch_price = [int(row[2]) for row in price_data_zt]
-        korol_komun_price = [int(row[3]) for row in price_data_zt]
+        mazep_epic_price = [row[1] for row in price_data_zt]
+        novog_hinch_price = [row[2] for row in price_data_zt]
+        korol_komun_price = [row[3] for row in price_data_zt]
         shors_novaposh_price = [row[4] for row in price_data_zt]
         knyas_koval_price = [row[5] for row in price_data_zt]
         dif_ontaxi_zt_1 = [row[6] for row in price_data_zt]
@@ -184,9 +184,9 @@ def update_data_and_graph(start_time, end_time):
 
         
         time_price_opti_zap = [row[11] for row in price_data_opti_zap]
-        adress_1_zap = [int(row[1]) for row in price_data_opti_zap]
-        adress_2_zap = [int(row[2]) for row in price_data_opti_zap]
-        adress_3_zap = [int(row[3]) for row in price_data_opti_zap]
+        adress_1_zap = [row[1] for row in price_data_opti_zap]
+        adress_2_zap = [row[2] for row in price_data_opti_zap]
+        adress_3_zap = [row[3] for row in price_data_opti_zap]
         adress_4_zap = [row[4] for row in price_data_opti_zap]
         adress_5_zap = [row[5] for row in price_data_opti_zap]
       
@@ -207,9 +207,9 @@ def update_data_and_graph(start_time, end_time):
 
         
         time_price_opti_dnepr = [row[11] for row in price_data_opti_dnepr]
-        adress_1_dp = [int(row[1]) for row in price_data_opti_dnepr]
-        adress_2_dp = [int(row[2]) for row in price_data_opti_dnepr]
-        adress_3_dp = [int(row[3]) for row in price_data_opti_dnepr]
+        adress_1_dp = [row[1] for row in price_data_opti_dnepr]
+        adress_2_dp = [row[2] for row in price_data_opti_dnepr]
+        adress_3_dp = [row[3] for row in price_data_opti_dnepr]
         adress_4_dp = [row[4] for row in price_data_opti_dnepr]
         adress_5_dp = [row[5] for row in price_data_opti_dnepr]
       
@@ -229,9 +229,9 @@ def update_data_and_graph(start_time, end_time):
 
         
         time_price_opti_kr = [row[11] for row in price_data_opti_kr]
-        adress_1_kr = [int(row[1]) for row in price_data_opti_kr]
-        adress_2_kr = [int(row[2]) for row in price_data_opti_kr]
-        adress_3_kr = [int(row[3]) for row in price_data_opti_kr]
+        adress_1_kr = [row[1] for row in price_data_opti_kr]
+        adress_2_kr = [row[2] for row in price_data_opti_kr]
+        adress_3_kr = [row[3] for row in price_data_opti_kr]
         adress_4_kr = [row[4] for row in price_data_opti_kr]
         adress_5_kr = [row[5] for row in price_data_opti_kr]
       
@@ -252,9 +252,9 @@ def update_data_and_graph(start_time, end_time):
 
         
         time_price_opti_zt = [row[11] for row in price_data_opti_zt]
-        adress_1_zt = [int(row[1]) for row in price_data_opti_zt]
-        adress_2_zt = [int(row[2]) for row in price_data_opti_zt]
-        adress_3_zt = [int(row[3]) for row in price_data_opti_zt]
+        adress_1_zt = [row[1] for row in price_data_opti_zt]
+        adress_2_zt = [row[2] for row in price_data_opti_zt]
+        adress_3_zt = [row[3] for row in price_data_opti_zt]
         adress_4_zt = [row[4] for row in price_data_opti_zt]
         adress_5_zt = [row[5] for row in price_data_opti_zt]
       
@@ -267,6 +267,8 @@ def update_data_and_graph(start_time, end_time):
         fig_price_opti_zt.add_trace(go.Scatter(x=time_price_opti_zt, y=adress_4_zt, mode='lines', name='Украинки Леси ул. 40 - Тена Бориса ул. 123'))
         fig_price_opti_zt.add_trace(go.Scatter(x=time_price_opti_zt, y=adress_5_zt, mode='lines', name='Вокзальная ул. 3 - Космонавтов ул. 4'))
         fig_price_opti_zt.update_layout(title='Цены Opti Житомир', xaxis_title='Время', yaxis_title='Цена')
+        
+        
         return fig_price, fig_price_zap, fig_price_dnepr, fig_price_kr, fig_price_zt,fig_price_opti_ha, fig_price_opti_zap, fig_price_opti_dnepr, fig_price_opti_kr, fig_price_opti_zt
 
 
@@ -305,10 +307,10 @@ app.layout = html.Div(children=[
 
 # Определение функции обновления графика по интервалу и при включении чек-бокса
 @app.callback(Output('price-graph-hark', 'figure'),Output('price-graph-zap','figure'),Output('price-graph-dnepr','figure'),Output('price-graph-kr','figure'),Output('price-graph-zt','figure'),Output('price-graph-opti-ha','figure'),Output('price-graph-opti-zap','figure'),Output('price-graph-opti-dnepr','figure'),Output('price-graph-opti-kr','figure'),Output('price-graph-opti-zt','figure'),
-              [Input('date-picker-range', 'start_date'),
+              Input('date-picker-range', 'start_date'),
                Input('date-picker-range', 'end_date'),
                Input('auto-update-checklist', 'value'),
-               Input('interval-component', 'n_intervals')])
+               Input('interval-component', 'n_intervals'))
 def update_graph(start_date, end_date, auto_update_value, n_intervals):
     if 'enabled' in auto_update_value:
         return update_data_and_graph(start_date, end_date)
